@@ -13,16 +13,34 @@
                     <h1>Catgle</h1>
                 </div>
                 <div class="row">
-                    <p id="results"></p>
+                    <div id="results"></div>
                     <script>
                         var results = INSERTRESULTSHERE;
                         
                         for(let i = 0; i < results.length; i++) {
                             console.log(results[i]);
-                            results[i] = JSON.stringify(results[i]);
+                            // results[i] = JSON.stringify(results[i]);
                         }
                         // results.join(", ");
+
                         document.getElementById("results").innerText = results;
+                        for(let i = 0; i < results.length; i++) {
+                            let minicontainer = document.createElement("div");
+                            minicontainer.className = "result";
+                            if(results[i].contains("url")) {
+                                let url = document.createElement("a");
+                                title.className = "url";
+                                url.href = results[i].url;
+                                url.innerText = results[i].title;
+                                minicontainer.appendChild(url);
+                            } else {
+                                let title = document.createElement("p");
+                                title.className = "url";
+                            }
+                            if(1!=results.length) {
+                                document.getElementById("results").appendChild(document.createElement("br"));
+                            }
+                        }
                     </script>
                 </div>
             </div>
