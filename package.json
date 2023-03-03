@@ -1,0 +1,23 @@
+{
+  "name": "catgle",
+  "version": "1.0.0",
+  "description": "A search engine for cats because reasons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamienB325/Catgle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamienB325/Catgle/issues"
+  },
+  "homepage": "https://github.com/DamienB325/Catgle#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minisearch": "^6.0.1"
+  }
+}
